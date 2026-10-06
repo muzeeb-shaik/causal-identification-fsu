@@ -1,0 +1,10 @@
+# Paper PDFs are copyrighted; do not publish
+*.pdf
+# Stata logs and system files
+*.log
+.DS_Store
+.quarto/
+*.knit.md
+# Images not used in the deck
+images/baker_1.png
+images/baker_2.png
