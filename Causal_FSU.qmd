@@ -557,7 +557,7 @@ Effect of app adoption on the change in 15-month sales ($10,000)
 
 ## The IV Idea
 
-![](images/iv_dag.svg){width="78%" fig-align="center" fig-alt="Causal diagram: instrument Z affects treatment D, which affects outcome Y; an unobserved shock U affects D and Y; there is no direct path from Z to Y and no link between U and Z"}
+![](images/iv_dag.svg){.nostretch width="78%" fig-align="center" fig-alt="Causal diagram: instrument Z affects treatment D, which affects outcome Y; an unobserved shock U affects D and Y; there is no direct path from Z to Y and no link between U and Z"}
 
 - Only the part of $D$ driven by $Z$ is used, and that part is free of $U$.
 
