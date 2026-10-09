@@ -392,31 +392,33 @@
 <li class="fragment">Trade-offs between stronger <strong>internal validity</strong> on one side and assumptions and <strong>generalizability</strong> concerns on the other.</li>
 </ul>
 </section>
-<section id="when-randomization-isnt-feasible" class="slide level2">
-<h2>When Randomization Isn’t Feasible</h2>
+<section id="what-we-will-cover-today" class="slide level2 smaller">
+<h2>What We Will Cover Today</h2>
 <div class="columns">
-<div class="column" style="width:58%;">
+<div class="column" style="width:50%;">
+<h3 id="matching-approaches">1. Matching approaches</h3>
 <ul>
-<li class="fragment"><p><strong>Impractical.</strong> You cannot reprice <strong>half</strong> your national chain at random.</p></li>
-<li class="fragment"><p><strong>Unethical.</strong> You cannot randomly <strong>deny</strong> a health benefit to customers.</p></li>
-<li class="fragment"><p><strong>Impossible.</strong> Policy shocks happen <strong>to you</strong>, not by you.</p></li>
-<li class="fragment"><p><strong>Examples</strong></p>
-<ul>
-<li class="fragment">Citywide tax change; statewide minimum-wage hike</li>
-<li class="fragment">Algorithm change rolled out by platform</li>
-<li class="fragment">Loyalty tier thresholds or grant cutoffs</li>
-</ul></li>
+<li class="fragment"><strong>When.</strong> Selection on <strong>observed</strong> characteristics</li>
+<li class="fragment"><strong>Methods.</strong> Propensity score matching, inverse probability weighting, doubly robust estimators</li>
+<li class="fragment"><strong>Example.</strong> A B2B mobile app and buyer sales (Gill, Sridhar, and Grewal 2017, <em>JM</em>)</li>
 </ul>
-</div><div class="column" style="width:42%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?q=80&amp;w=1200.png" class="quarto-figure quarto-figure-center" style="width:75.0%"></p>
-</figure>
-</div>
+</div><div class="column" style="width:50%;">
+<h3 id="instrumental-variables">2. Instrumental variables</h3>
+<ul>
+<li class="fragment"><strong>When.</strong> Selection on <strong>unobserved</strong> characteristics</li>
+<li class="fragment"><strong>Methods.</strong> Two-stage least squares, first-stage and overidentification diagnostics, weak and invalid instruments</li>
+<li class="fragment"><strong>Example.</strong> Herding in advertising spending disclosure (Shi, Grewal, and Sridhar 2021, <em>JMR</em>)</li>
+</ul>
 </div></div>
+<div class="fragment">
+<ul>
+<li class="fragment"><strong>Appendix (self-study).</strong> Difference-in-differences, event studies, and staggered adoption</li>
+<li class="fragment">Each method comes with a <strong>live Stata demonstration</strong> on simulated data where the true effect is known. All do-files and data are on the course GitHub page.</li>
+</ul>
+</div>
 </section></section>
 <section>
-<section id="matching-approaches" class="title-slide slide level1 center">
+<section id="matching-approaches-1" class="title-slide slide level1 center">
 <h1>Matching Approaches</h1>
 
 </section>
@@ -928,7 +930,7 @@
 </ul>
 </section></section>
 <section>
-<section id="instrumental-variables" class="title-slide slide level1 center">
+<section id="instrumental-variables-1" class="title-slide slide level1 center">
 <h1>Instrumental Variables</h1>
 
 </section>
@@ -1250,7 +1252,7 @@
 <li class="fragment">Show <strong>several estimators</strong> and a <strong>sensitivity analysis</strong> for unobserved confounding.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="instrumental-variables-1">Instrumental variables</h3>
+<h3 id="instrumental-variables-2">Instrumental variables</h3>
 <ul>
 <li class="fragment">Make the <strong>exclusion argument</strong> explicit, using institutional detail.</li>
 <li class="fragment">Report the <strong>first stage</strong> in full, with the first-stage F.</li>

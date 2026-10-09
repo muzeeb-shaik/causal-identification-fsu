@@ -186,24 +186,30 @@ execute:
 
 ---
 
-## When Randomization Isn't Feasible
+## What We Will Cover Today {.smaller}
 
 :::: {.columns}
-::: {.column width="58%"}
-- **Impractical.** You cannot reprice **half** your national chain at random.
-- **Unethical.** You cannot randomly **deny** a health benefit to customers.
-- **Impossible.** Policy shocks happen **to you**, not by you.
-
-- **Examples**
-  - Citywide tax change; statewide minimum-wage hike
-  - Algorithm change rolled out by platform
-  - Loyalty tier thresholds or grant cutoffs
+::: {.column width="50%"}
+### 1. Matching approaches
+- **When.** Selection on **observed** characteristics
+- **Methods.** Propensity score matching, inverse probability weighting, doubly robust estimators
+- **Example.** A B2B mobile app and buyer sales (Gill, Sridhar, and Grewal 2017, *JM*)
 :::
 
-::: {.column width="42%"}
-![](https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?q=80&w=1200){fig-align="center" width="75%"}
+::: {.column width="50%"}
+### 2. Instrumental variables
+- **When.** Selection on **unobserved** characteristics
+- **Methods.** Two-stage least squares, first-stage and overidentification diagnostics, weak and invalid instruments
+- **Example.** Herding in advertising spending disclosure (Shi, Grewal, and Sridhar 2021, *JMR*)
 :::
 ::::
+
+::: {.fragment}
+
+- **Appendix (self-study).** Difference-in-differences, event studies, and staggered adoption
+- Each method comes with a **live Stata demonstration** on simulated data where the true effect is known. All do-files and data are on the course GitHub page.
+
+:::
 
 
 # Matching Approaches
