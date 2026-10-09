@@ -207,7 +207,7 @@ execute:
 ::: {.fragment}
 
 - **Appendix (self-study).** Difference-in-differences, event studies, and staggered adoption
-- Each method comes with a **live Stata demonstration** on simulated data where the true effect is known. All do-files and data are on the course GitHub page.
+- Each method comes with a **live Stata demonstration** on simulated data where the true effect is known.
 
 :::
 
