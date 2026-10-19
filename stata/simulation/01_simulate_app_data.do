@@ -23,7 +23,9 @@
 * Adoption depends only on observed characteristics plus random noise, so
 * selection on observables holds by construction.
 *
-* Output: app_adoption.dta and app_adoption.csv, saved in this folder.
+* Output: app_adoption.dta and app_adoption.csv, saved in the stata/data/ folder.
+*
+* Run this file from the stata/simulation/ folder.
 *==============================================================================
 
 
@@ -206,8 +208,8 @@ format sales_pre sales_post dsales firm_size buyer_power competitiveness ///
 compress
 
 * Save as a Stata file and as a CSV (for anyone not using Stata)
-save "app_adoption.dta", replace
-export delimited using "app_adoption.csv", replace
+save "../data/app_adoption.dta", replace
+export delimited using "../data/app_adoption.csv", replace
 
 
 *------------------------------------------------------------------------------

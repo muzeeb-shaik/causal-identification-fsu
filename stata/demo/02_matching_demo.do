@@ -8,7 +8,8 @@
 * Question: Does adopting a seller's free B2B mobile app increase the buyer's
 *           purchases? (Setting from Gill, Sridhar, and Grewal 2017, JM)
 *
-* Data:     app_adoption.dta, created by 01_simulate_app_data.do
+* Data:     stata/data/app_adoption.dta, created by
+*           stata/simulation/01_simulate_app_data.do
 *
 * Key variables
 *   app        = 1 if the buyer adopted the app (the treatment)
@@ -18,7 +19,7 @@
 *   tau_i      = the TRUE effect for each buyer (exists only because the data
 *                are simulated; never available in real data)
 *
-* Run this file from the stata/ folder. It uses only official Stata commands
+* Run this file from the stata/demo/ folder. It uses only official Stata commands
 * (teffects, tebalance, teoverlap), available in Stata 14 and later.
 *==============================================================================
 
@@ -31,7 +32,7 @@
 clear all
 
 * Load the simulated buyer data (1,148 buyers)
-use "app_adoption.dta", clear
+use "../data/app_adoption.dta", clear
 
 * Look at the variables and their labels
 describe
@@ -117,7 +118,7 @@ twoway (kdensity pscore if app == 0, lcolor(gs8)) ///
        title("Overlap in the propensity score")
 
 * Save the graph for the slides
-graph export "../images/app_overlap.png", replace width(1600)
+graph export "../../images/app_overlap.png", replace width(1600)
 
 
 *------------------------------------------------------------------------------
@@ -144,7 +145,7 @@ tebalance summarize
 tebalance density ln_freq
 
 * Save the graph for the slides
-graph export "../images/app_balance_freq.png", replace width(1600)
+graph export "../../images/app_balance_freq.png", replace width(1600)
 
 * 5c. Three nearest neighbors: averages over more controls per adopter
 *     (lower variance, possibly more bias)

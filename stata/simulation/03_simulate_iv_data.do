@@ -27,7 +27,9 @@
 * paper's 2SLS estimate is 0.483). Averaged over firm-years, including a few
 * whose probability sits at 0, the true effect is stored in tau_i.
 *
-* Output: disclosure_panel.dta and disclosure_panel.csv, saved in this folder.
+* Output: disclosure_panel.dta and disclosure_panel.csv, saved in the stata/data/ folder.
+*
+* Run this file from the stata/simulation/ folder.
 *==============================================================================
 
 
@@ -248,8 +250,8 @@ xtset firm_id year
 compress
 
 * Save as a Stata file and as a CSV
-save "disclosure_panel.dta", replace
-export delimited using "disclosure_panel.csv", replace
+save "../data/disclosure_panel.dta", replace
+export delimited using "../data/disclosure_panel.csv", replace
 
 
 *------------------------------------------------------------------------------

@@ -8,7 +8,8 @@
 *           advertising spending? (Setting from Shi, Grewal, and Sridhar
 *           2021, JMR)
 *
-* Data:     disclosure_panel.dta, created by 03_simulate_iv_data.do
+* Data:     stata/data/disclosure_panel.dta, created by
+*           stata/simulation/03_simulate_iv_data.do
 *           1,500 firms x 10 years = 15,000 firm-years
 *
 * Key variables
@@ -27,7 +28,7 @@
 * standard errors clustered by firm. (The paper uses industry x year fixed
 * effects; industry and year effects keep the demo fast.)
 *
-* Run this file from the stata/ folder. Official Stata commands only.
+* Run this file from the stata/demo/ folder. Official Stata commands only.
 *==============================================================================
 
 
@@ -39,7 +40,7 @@
 clear all
 
 * Load the simulated firm-year panel
-use "disclosure_panel.dta", clear
+use "../data/disclosure_panel.dta", clear
 
 * Look at the variables and their labels
 describe

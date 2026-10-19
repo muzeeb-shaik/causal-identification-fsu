@@ -822,9 +822,9 @@ Thank You! <br> Email: [*shaikmu\@iu.edu*](mailto:shaikmu@iu.edu)
 ## About This Appendix {visibility="uncounted"}
 
 - These slides are for **self-study**. Each step has a matching block of Stata code.
-- **Files** (in the `stata/` folder)
-  - `05_simulate_did_data.do` creates the staggered-rollout data
-  - `06_did_demo.do` runs every estimate shown here
+- **Files**
+  - `stata/simulation/05_simulate_did_data.do` creates the staggered-rollout data
+  - `stata/demo/06_did_demo.do` runs every estimate shown here
 - **Part A.** Two-period DiD on the app adoption data, as in Gill, Sridhar, and Grewal (2017).
 - **Part B.** A staggered rollout of the app across sales regions: event studies, why standard two-way fixed effects (TWFE) can fail, and heterogeneity-robust estimators.
 - As before, the data are simulated, so the **true effects are known**.

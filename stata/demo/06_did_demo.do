@@ -5,13 +5,13 @@
 * appendix of "Causal Identification with Observational Data," PhD Seminar,
 * Florida State University.
 *
-* Part A: two-period DiD on the app adoption data (app_adoption.dta, from
+* Part A: two-period DiD on the app adoption data (stata/data/app_adoption.dta, from
 *         01_simulate_app_data.do), as in Equation 1 of Gill, Sridhar, and
 *         Grewal (2017, JM)
 * Part B: staggered rollout of the app across sales regions
-*         (did_rollout.dta, from 05_simulate_did_data.do)
+*         (stata/data/did_rollout.dta, from 05_simulate_did_data.do)
 *
-* Run this file from the stata/ folder. Official Stata commands only;
+* Run this file from the stata/demo/ folder. Official Stata commands only;
 * xtdidregress needs Stata 17 or later; estat bdecomp and xthdidregress
 * need Stata 18 or later.
 *==============================================================================
@@ -29,7 +29,7 @@
 clear all
 
 * Load the buyer data: one row per buyer, with pre and post sales
-use "app_adoption.dta", clear
+use "../data/app_adoption.dta", clear
 
 * Rename the sales variables so reshape can stack them:
 * sales0 = 15 months before launch, sales1 = 15 months after
@@ -109,7 +109,7 @@ regress sales i.app##i.post ///
 clear all
 
 * Load the buyer-quarter panel (1,148 buyers x 12 quarters)
-use "did_rollout.dta", clear
+use "../data/did_rollout.dta", clear
 
 * Declare the panel: buyers observed over quarters
 xtset buyer_id quarter
@@ -142,7 +142,7 @@ twoway (connected sales quarter if rollout_q == 5, lcolor(cranberry) mcolor(cran
        xlabel(1(1)12) title("Staggered rollout of the app")
 
 * Save the graph for the slides
-graph export "../images/did_rollout_means.png", replace width(1600)
+graph export "../../images/did_rollout_means.png", replace width(1600)
 restore
 
 
@@ -173,7 +173,7 @@ estat bdecomp
 estat bdecomp, graph
 
 * Save the graph for the slides
-graph export "../images/did_bdecomp.png", replace width(1600)
+graph export "../../images/did_bdecomp.png", replace width(1600)
 
 
 *------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ estat aggregation
 estat aggregation, dynamic graph
 
 * Save the graph for the slides
-graph export "../images/did_event_study.png", replace width(1600)
+graph export "../../images/did_event_study.png", replace width(1600)
 
 * Effects by rollout cohort (early regions gain more)
 estat aggregation, cohort

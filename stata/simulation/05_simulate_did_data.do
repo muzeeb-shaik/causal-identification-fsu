@@ -21,7 +21,9 @@
 * The treatment is the app being AVAILABLE in the buyer's region, so the
 * effect is an intent-to-treat effect of the rollout.
 *
-* Output: did_rollout.dta and did_rollout.csv, saved in this folder.
+* Output: did_rollout.dta and did_rollout.csv, saved in the stata/data/ folder.
+*
+* Run this file from the stata/simulation/ folder.
 *==============================================================================
 
 
@@ -140,8 +142,8 @@ xtset buyer_id quarter
 compress
 
 * Save as a Stata file and as a CSV
-save "did_rollout.dta", replace
-export delimited using "did_rollout.csv", replace
+save "../data/did_rollout.dta", replace
+export delimited using "../data/did_rollout.csv", replace
 
 
 *------------------------------------------------------------------------------
