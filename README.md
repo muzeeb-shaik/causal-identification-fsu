@@ -7,7 +7,7 @@ PhD seminar, Florida State University. Muzeeb Shaik, Kelley School of Business, 
 ## Contents
 
 - `Causal_FSU.qmd`: Quarto (reveal.js) source of the slides; `Causal_FSU.html` is the rendered deck.
-- `stata/`: Stata code and simulated data for every demonstration in the slides, in three folders.
+- `stata/`: Stata code and data for every demonstration in the slides. See [`stata/README.md`](stata/README.md) for how to run them and what each variable means.
 
 | Folder | File | What it does |
 |--------|------|--------------|
